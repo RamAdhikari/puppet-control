@@ -1,3 +1,5 @@
-class profile::linux{
- notice("I am running on Linux Node")
+class profile::linux {
+  notify { 'hostname':
+  message => 'hostname is going to be executed now on windows Linux OS'
+}
 }
