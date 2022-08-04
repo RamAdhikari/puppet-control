@@ -1,4 +1,4 @@
-class domain_membership (
+class profile::domain_membership (
   $domain = 'W2K16DC01.HomeLab.local',
   $username = 'administrator',
   $password = 'K@thmand0Ra',
