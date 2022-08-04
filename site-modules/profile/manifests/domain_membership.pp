@@ -6,7 +6,7 @@ $code = "
  $username='homelab\administrator'
  $password = ConvertTo-SecureString 'K@thmand0Ra' -AsPlainText -Force
  $cred=New-Object System.Management.Automation.PSCredential ('$username','$password')
- Add-Computer -DomainName "$domain" -OUPath "$machine_ou"  -Restart -Force -Credential "$cred"
+ Add-Computer -DomainName '$domain' -OUPath '$machine_ou'  -Restart -Force -Credential '$cred'
 "
 
 exec { 'join_domain':
