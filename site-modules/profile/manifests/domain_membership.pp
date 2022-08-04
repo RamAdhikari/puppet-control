@@ -1,5 +1,5 @@
 class profile::domain_membership (
-  $domain = 'W2K16DC01.HomeLab.local',
+  $domain = 'HomeLab.local',
   $username = 'administrator',
   $password = 'K@thmand0Ra',
   $secure_password = false,
@@ -17,7 +17,7 @@ if (-not \$?) { \
 write-error 'Error: Unable to create PSCredential object'; \
 exit 20; \
 } \
-Add-Computer -DomainName \$domain -OUPath \$machine_ou -Restart -Force -Cred \$creds; \
+Add-Computer -DomainName ${domain}  -Restart -Force -Cred \$creds; \
 if (-not \$?) { \
 write-error 'Error: Unable to join domain'; \
 exit 30; \
